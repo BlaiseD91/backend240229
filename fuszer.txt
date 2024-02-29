@@ -1,0 +1,45 @@
+fkod	fuszernev	egysegar
+PP	Csemege fűszerpaprika	8000
+CP	Csípős fűszerpaprika	9000
+CH	Chili	12000
+CB	Cayenne bors	14000
+BL	Babérlevél	1500
+BA	Bazsalikom	900
+BO	Borókabogyó	2400
+BF	Borsikafű	2100
+BM	Borsmenta	1700
+CI	Citromhéj	4200
+CU	Curry por	7400
+CA	Csillagánizs	4800
+EK	Édeskömény	2300
+FA	Fahéj	5000
+WB	Fehérbors	5700
+BB	Feketebors	4800
+FH	Fokhagymapor	2400
+FK	Fűszerkömény	2400
+GS	Görögszénamag	9000
+GI	Gyömbér	11200
+KF	Kakukkfű	3700
+KL	Kaporlevél	1700
+KA	Kardamom	17000
+KO	Koriander	7600
+KU	Kurkuma	9400
+LE	Lestyánlevél	2100
+MA	Majoranna	1600
+MM	Mustármag	2000
+OR	Oregano	1900
+PA	Paradicsompor	6500
+PL	Petrezselyemlevél	1300
+RO	Rozmaring	1700
+RK	Római kömény	5000
+SF	Sáfrány	60000
+SO	Só	200
+SZ	Szecsuáni bors	15400
+SB	Szegfűbors	9800
+SS	Szegfűszeg	6700
+SD	Szerecsendió	13500
+TA	Tárkony	2400
+TU	Turbulya	3400
+VH	Vöröshagymapor	600
+ZB	Zöld bors	7450
+ZS	Zsálya	2300

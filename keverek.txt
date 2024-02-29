@@ -1,0 +1,16 @@
+﻿kkod;kevereknev
+AFTI;Afrika titka
+BOLL;Böllér
+FLEK;Flekken
+GRIL;Grill
+ILKA;Illatos karácsony
+MAGY;Magyaros
+MATA;Matador
+MEDI;Mediterrán
+NAHU;Nagyi húslevese
+ORIE;Orientális
+PIGI;Pikáns Grill
+OMSZ;Omlós szárnyas
+SZEC;Szecsuáni
+TATA;Tatár
+VADP;Vadpácoló
