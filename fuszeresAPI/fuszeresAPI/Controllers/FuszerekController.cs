@@ -33,7 +33,7 @@ namespace fuszeresAPI.Controllers
 
         // GET: api/Fuszerek/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Fuszer>> GetFuszer(int id)
+        public async Task<ActionResult<Fuszer>> GetFuszer(string id)
         {
           if (_context.fuszerek == null)
           {
@@ -52,9 +52,9 @@ namespace fuszeresAPI.Controllers
         // PUT: api/Fuszerek/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutFuszer(int id, Fuszer fuszer)
+        public async Task<IActionResult> PutFuszer(string id, Fuszer fuszer)
         {
-            if (id != fuszer.Id)
+            if (id != fuszer.Fkod)
             {
                 return BadRequest();
             }
@@ -90,14 +90,28 @@ namespace fuszeresAPI.Controllers
               return Problem("Entity set 'FuszeresAdatbazis.fuszerek'  is null.");
           }
             _context.fuszerek.Add(fuszer);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (FuszerExists(fuszer.Fkod))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
-            return CreatedAtAction("GetFuszer", new { id = fuszer.Id }, fuszer);
+            return CreatedAtAction("GetFuszer", new { id = fuszer.Fkod }, fuszer);
         }
 
         // DELETE: api/Fuszerek/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteFuszer(int id)
+        public async Task<IActionResult> DeleteFuszer(string id)
         {
             if (_context.fuszerek == null)
             {
@@ -115,9 +129,9 @@ namespace fuszeresAPI.Controllers
             return NoContent();
         }
 
-        private bool FuszerExists(int id)
+        private bool FuszerExists(string id)
         {
-            return (_context.fuszerek?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.fuszerek?.Any(e => e.Fkod == id)).GetValueOrDefault();
         }
     }
 }
