@@ -9,5 +9,6 @@ namespace fuszeresAPI.Models
         public DbSet<Keverek> keverekek { get; set; }
         public DbSet<Komponens> komponensek { get; set; }
 
+        
     }
 }

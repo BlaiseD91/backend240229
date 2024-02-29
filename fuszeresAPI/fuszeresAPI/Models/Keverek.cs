@@ -1,7 +1,11 @@
-﻿namespace fuszeresAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace fuszeresAPI.Models
 {
     public class Keverek
     {
-        public int Id { get; set; }
+        [Key]
+        public string Kkod { get; set; }
+        public string Kevereknev { get; set; }
     }
 }

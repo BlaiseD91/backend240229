@@ -2,7 +2,9 @@
 {
     public class Komponens
     {
-        public int Id { get; set; }
+        public string Fkod { get; set; }
+        public string Kkod { get; set; }
+        public int Tartalmaz { get; set; }
 
     }
 }
