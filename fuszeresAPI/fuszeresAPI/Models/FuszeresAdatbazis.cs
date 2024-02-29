@@ -9,6 +9,10 @@ namespace fuszeresAPI.Models
         public DbSet<Keverek> keverekek { get; set; }
         public DbSet<Komponens> komponensek { get; set; }
 
-        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Komponens>().HasKey(pk => new { pk.Fkod, pk.Kkod });
+        }
     }
 }
